@@ -1,0 +1,50 @@
+<form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="form-card">
+    <mat-card-header>
+      <mat-card-title>Find your desired car!</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-select placeholder="Car Maker*" formControlName="carMaker">
+              <mat-option *ngFor="let carMaker of carMakers" [value]="carMaker.abbreviation">
+                {{ carMaker.name }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="addressForm.controls['carMaker'].hasError('required')">
+              Car Maker is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-6">
+          <mat-form-field class="full-width">
+            <mat-select placeholder="Engine Type*" formControlName="engine">
+              <mat-option *ngFor="let engine of engines" [value]="engine.abbreviation">
+                {{ engine.name }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="addressForm.controls['carMaker'].hasError('required')">
+              Engine is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col col-6">
+          <mat-form-field class="full-width">
+            <mat-select placeholder="Color" formControlName="engine">
+              <mat-option *ngFor="let color of colors" [value]="color">
+                {{ color }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!addressForm.valid">Submit</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
