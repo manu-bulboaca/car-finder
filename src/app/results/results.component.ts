@@ -33,6 +33,6 @@ export class ResultsComponent {
   }
 
   seeMore(): void {
-    // TODO
+    this.router.navigate(['more'])
   }
 }

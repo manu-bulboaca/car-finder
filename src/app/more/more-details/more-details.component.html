@@ -1,0 +1,40 @@
+<div class="accordion-container">
+  <h1 class="mat-h1">
+    <button
+            id="back-button" mat-raised-button
+            color="primary" type="button"
+            (click)="goBack()">
+      Back
+    </button>
+  </h1>
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Technical Data
+        </mat-panel-title>
+        <mat-panel-description>
+          Specs
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p><b>Fuel consumption (economy) - urban (NEDC, WLTP equivalent)</b> 7.5-8.2 l/100 km</p>
+      <p><b>Fuel consumption (economy) - extra urban (NEDC, WLTP equivalent)</b> 5.6-5.9 l/100 km</p>
+      <p><b>Fuel consumption (economy) - combined (NEDC, WLTP equivalent)</b> 6.3-6.7 l/100 km</p>
+      <p><b>CO2 emissions (NEDC, WLTP equivalent)</b>	145-155 g/km</p>
+      <p><b>Fuel Type</b> Petrol (Gasoline)</p>
+      <p><b>Acceleration</b> 0 - 100 km/h	4.8 sec</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Price Details
+        </mat-panel-title>
+        <mat-panel-description>
+          Cash or Card
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>Prices are available at all our dealerships!</p>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
