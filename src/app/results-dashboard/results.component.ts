@@ -3,11 +3,11 @@ import {Router} from "@angular/router";
 import {LoaderService} from "../loader/loader.service";
 
 @Component({
-  selector: 'app-results-dashboard',
-  templateUrl: './results-dashboard.component.html',
-  styleUrls: ['./results-dashboard.component.scss']
+  selector: 'results',
+  templateUrl: './results.component.html',
+  styleUrls: ['./results.component.scss']
 })
-export class ResultsDashboardComponent {
+export class ResultsComponent {
   /** Based on the screen size, switch from standard to one column per row */
   cards = this.loaderService.fetchResults();
 
