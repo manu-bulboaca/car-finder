@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import {Router} from "@angular/router";
 
+// TODO: Make this component standalone and import the needed angular-material modules
+
 @Component({
   selector: 'more-details',
   templateUrl: './more-details.component.html',

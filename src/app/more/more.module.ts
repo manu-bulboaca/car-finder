@@ -9,6 +9,9 @@ import {MatButtonModule} from "@angular/material/button";
 const MORE_ROUTES: Routes = [{ path: '', component: MoreDetailsComponent }];
 export const MORE_ROUTING = RouterModule.forChild(MORE_ROUTES);
 
+
+// TODO: This file should be removed as the MoreModules is not needed anymore
+
 @NgModule({
   declarations: [
     MoreDetailsComponent
