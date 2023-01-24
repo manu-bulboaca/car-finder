@@ -5,7 +5,7 @@ import {LoaderService} from "../loader/loader.service";
 import {MatCardModule} from "@angular/material/card";
 import {MatSelectModule} from "@angular/material/select";
 import {MatButtonModule} from "@angular/material/button";
-import {CommonModule} from "@angular/common";
+import {NgFor, NgIf} from "@angular/common";
 
 @Component({
   standalone: true,
@@ -13,7 +13,8 @@ import {CommonModule} from "@angular/common";
   templateUrl: './find.component.html',
   styleUrls: ['./find.component.scss'],
   imports: [
-    CommonModule,
+    NgIf,
+    NgFor,
     MatCardModule,
     ReactiveFormsModule,
     MatSelectModule,

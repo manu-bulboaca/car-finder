@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {Router} from "@angular/router";
 import {LoaderService} from "../loader/loader.service";
-import {CommonModule} from "@angular/common";
+import {NgForOf} from "@angular/common";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatIconModule} from "@angular/material/icon";
@@ -14,7 +14,7 @@ import {MatButtonModule} from "@angular/material/button";
   templateUrl: './results.component.html',
   styleUrls: ['./results.component.scss'],
   imports: [
-    CommonModule,
+    NgForOf,
     MatGridListModule,
     MatMenuModule,
     MatButtonModule,
