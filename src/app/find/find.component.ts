@@ -1,12 +1,24 @@
 import {Component, OnInit} from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import {FormBuilder, ReactiveFormsModule, Validators} from '@angular/forms';
 import {Router} from "@angular/router";
 import {LoaderService} from "../loader/loader.service";
+import {MatCardModule} from "@angular/material/card";
+import {MatSelectModule} from "@angular/material/select";
+import {MatButtonModule} from "@angular/material/button";
+import {CommonModule} from "@angular/common";
 
 @Component({
+  standalone: true,
   selector: 'find',
   templateUrl: './find.component.html',
-  styleUrls: ['./find.component.scss']
+  styleUrls: ['./find.component.scss'],
+  imports: [
+    CommonModule,
+    MatCardModule,
+    ReactiveFormsModule,
+    MatSelectModule,
+    MatButtonModule,
+  ]
 })
 export class FindComponent implements OnInit{
   addressForm = this.fb.group({
