@@ -21,7 +21,7 @@ import {NgFor, NgIf} from "@angular/common";
     MatButtonModule,
   ]
 })
-export class FindComponent implements OnInit{
+export default class FindComponent implements OnInit{
   addressForm = this.fb.group({
     carMaker: [null, Validators.required],
     engine: [null, Validators.required],

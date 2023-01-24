@@ -1,10 +1,8 @@
 import { Routes } from '@angular/router';
-import {FindComponent} from "./find/find.component";
-import {ResultsComponent} from "./results/results.component";
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'find' },
-  { path: 'find', component: FindComponent },
-  { path: 'results', component: ResultsComponent },
-  { path: 'more', loadChildren: () => import('./more/more.module').then(module => module.MoreModule)}
+  { path: 'find', loadComponent: () => import('./find/find.component')},
+  { path: 'results', loadComponent: () => import('./results/results.component') },
+  { path: 'more', loadComponent: () => import('./more-details/more-details.component')}
 ];

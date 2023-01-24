@@ -22,7 +22,7 @@ import {MatButtonModule} from "@angular/material/button";
     MatCardModule
   ]
 })
-export class ResultsComponent {
+export default class ResultsComponent {
   /** Based on the screen size, switch from standard to one column per row */
   cards = this.loaderService.fetchResults();
 
