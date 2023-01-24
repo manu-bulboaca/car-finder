@@ -32,7 +32,5 @@ export class ResultsComponent {
     this.router.navigate(['find'])
   }
 
-  seeMore(): void {
-    // TODO
-  }
+  seeMore(): void {}
 }

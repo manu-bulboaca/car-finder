@@ -10,6 +10,8 @@ const routes: Routes = [
   { path: 'results', component: ResultsComponent }
 ];
 
+
+// TODO: The AppRoutingModule is not needed anymore
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
