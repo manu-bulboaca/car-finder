@@ -4,7 +4,7 @@ import {Router} from "@angular/router";
 import {LoaderService} from "../loader/loader.service";
 
 @Component({
-  selector: 'app-find',
+  selector: 'find',
   templateUrl: './find.component.html',
   styleUrls: ['./find.component.scss']
 })
